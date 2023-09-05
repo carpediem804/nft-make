@@ -1,17 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import MetaMaskLogin from 'pages/MetaMaskLogin';
+import MainPage from 'pages/MainPage';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>MetaMask Login</h1>
-        <MetaMaskLogin />
-        {/* <Test /> */}
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<MetaMaskLogin />} />
+        <Route path="/" element={<MainPage />} />
+      </Routes>
+    </Router>
   );
 }
 
