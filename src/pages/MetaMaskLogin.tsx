@@ -3,8 +3,52 @@
 import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
 import detectEthereumProvider from '@metamask/detect-provider';
-import FileUpload from 'components/Fileupload';
 import FileDrop from 'components/FileDrop';
+import styled from 'styled-components';
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #ffffff; // Assuming MainPage has a white background
+  gap: 16px;
+  padding: 20px;
+`;
+
+const Button = styled.button`
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #6200ea; // Primary color
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: #3700b3;
+  }
+`;
+
+const CardContainer = styled.div`
+  background-color: #f5f5f5; // Card background color
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 16px;
+  word-break: break-word;
+  max-width: 600px;
+  width: 100%;
+  max-height: 60vh;
+  text-align: center;
+`;
+
+const AccountInfo = styled(CardContainer)``;
+
+const FileDropContainer = styled(CardContainer)`
+  border: 1px dashed #aaa;
+`;
 
 const MetaMaskLogin: React.FC = () => {
   const [account, setAccount] = useState<string | null>(null);
@@ -66,18 +110,19 @@ const MetaMaskLogin: React.FC = () => {
   };
 
   return (
-    <div>
+    <Container>
       {account ? (
         <>
-          <div>Connected with MetaMask: {account}</div>
-          {/* <FileUpload /> */}
-          <FileDrop />
-          <button onClick={handleLogout}>logout</button>
+          <AccountInfo>Connected with MetaMask: {account}</AccountInfo>
+          <Button onClick={handleLogout}>Logout</Button>
+          <FileDropContainer>
+            <FileDrop />
+          </FileDropContainer>
         </>
       ) : (
-        <button onClick={handleLogin}>Connect to MetaMask</button>
+        <Button onClick={handleLogin}>Connect to MetaMask</Button>
       )}
-    </div>
+    </Container>
   );
 };
 
