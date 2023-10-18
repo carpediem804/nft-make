@@ -12,7 +12,7 @@
 
 ## TODO 
 - ipfs 로 파일 저장
-- ERC20 Contract로 nft 생성
+-  nft 생성
 - 메타마스크에 NFT 전송 
 - 다른 지갑 연동 || 직접 로그인 구현
 
