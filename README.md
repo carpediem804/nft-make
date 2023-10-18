@@ -1,7 +1,6 @@
 # Make NFT AND Send to Wallet 
 
-
-<img width="1198" alt="image" src="https://github.com/carpediem804/nft-make/assets/33194900/66f6f013-bd0d-43cb-85fe-a3d0f3d86a8d">
+<img width="1198" alt="스크린샷 2023-10-18 오후 2 13 01" src="https://github.com/carpediem804/nft-make/assets/33194900/a2e889ac-50fc-4452-ac7b-f6c02c956fe0">
 
 <img width="807" alt="image" src="https://github.com/carpediem804/nft-make/assets/33194900/d666e253-712f-4d4c-a9d4-2c4be97f94ac">
 
